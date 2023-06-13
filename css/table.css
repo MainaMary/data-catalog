@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,700&family=Poppins:wght@300;400;500;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    }
+    .main-content{
+        position: relative;
+        overflow-x: hidden;
+        margin-left: 240px;
+        background-color: var(--bg-light-gray);
+       
+    }
+:root{
+    --primary-color: #497CF7;
+    --secondary-color: #7A7C8D;
+    --white: #ffffff;
+    --text-color: #DCDBE1;
+    --bg-gray:#DFE5FD;
+    --bg-green:#EDF5F7;
+    --icon-green:#8BC4BC;
+    --bg-light-gray:#E0E5FD;
+    --red:#d6545f;
+    }
+   table{
+        width: 100%;
+        border-collapse: collapse;
+        border: none;
+     }
+     table thead{
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      text-align: left;
+     }
+     th{
+        color: var(--white);
+        font-size: .9rem;
+        padding: .7rem 1.2rem;
+     }
+      td{
+        font-size: .9rem;
+        color: var(--secondary-color);
+        padding: .7rem 1.2rem;
+     }
+   table tbody tr td:last-child button{
+        border: 1px solid var(--primary-color);
+        background-color: transparent;
+        color: var(--primary-color);
+        border-radius: 5px;
+        font-weight: 700;
+        padding: .8rem 1rem;
+     }
+     main {
+        margin-top: 60px;
+        min-height: 90vh;
+       
+        padding:1.2rem;
+         
+    }

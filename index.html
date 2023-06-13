@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Data Catlog</title>
+    <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="brand">
+                <span class="ti-unlink"></span>
+                <span>Catlog</span>
+            </h3>
+            <span class="ti-menu-alt">
+                <i class='bx bx-menu'></i>
+            </span>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="">
+                        <span>
+                            <i class='bx bxs-dashboard'></i>
+                        </span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>
+                            <i class='bx bx-table' style='color:#ffffff'></i>
+                        </span>
+                        <span>All tables</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span> <i class='bx bx-search-alt-2' style='color:#ffffff'></i></span>
+                        <span>Search results</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span><i class='bx bx-log-out' style='color:#ffffff'></i></span>
+                        <span>Sign out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <div>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="social-icons">
+                <p><i class='bx bx-bell'></i></p>
+            </div>
+
+        </header>
+        <main>
+            <h2 class="dashboard-title">Overview</h2>
+            <div class="dashboard-cards">
+                <div class="dashboard-card-single">
+                    <div class="card-body">
+                        <div class="icon-wrapper icon-table">
+                            <i class='bx bx-table'></i>
+                        </div>
+
+                        <div class="dash-statistics">
+                            <h5>Total tables</h5>
+                            <h4>456</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dashboard-card-single">
+                    <div class="card-body">
+                        <div class="icon-wrapper icon-view">
+                            <i class='bx bxs-low-vision'></i>
+                        </div>
+
+                        <div class="dash-statistics">
+                            <h5>Total Views</h5>
+                            <h4>400</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="dashboard-card-single">
+                    <div class="card-body">
+                        <div class="icon-wrapper icon-columns">
+                            <i class='bx bx-bar-chart'></i>
+                        </div>
+
+                        <div class="dash-statistics">
+                            <h5>Total Columns</h5>
+                            <h4>45</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <section>
+                <div class="search-wrapper">
+                    <form>
+                        <div class="form-wrapper">
+
+                            <div class="input-wrapper">
+                                <input type="search" id="search-dropdown" placeholder="Search by name" required>
+                                <span type="submit">
+
+                                    <i class='bx bx-search-alt-2'></i>
+
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <button class="filter-button">
+                            <span>
+                                <i class='bx bx-filter'></i>
+                            </span>
+                            Filter</button>
+                    </div>
+                </div>
+
+
+            </section>
+            <section class="recent">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <div class="table-header">
+                            <h3>Table names</h3>
+                            <div>
+                                <button>
+                                    <span><i class='bx bx-right-arrow-alt' style='color:#ffffff'></i></span>
+                                    See all</button>
+                            </div>
+                        </div>
+                        <div class="table-wrapper">
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                        <th>View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Customers</td>
+                                        <td>User</td>
+                                        <td>30 Aug 2006</td>
+                                        <td>
+                                            <button>
+                                                <a href="./html/table.html">View table</a>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Customers</td>
+                                        <td>User</td>
+                                        <td>30 Aug 2006</td>
+                                        <td>
+                                            <button>View table</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Customers</td>
+                                        <td>User</td>
+                                        <td>15 March 2006</td>
+                                        <td>
+                                            <button>View table</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Customers</td>
+                                        <td>User</td>
+                                        <td>01 Jan 2013</td>
+                                        <td>
+                                            <button>View table</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Customers</td>
+                                        <td>User</td>
+                                        <td>01 Jan 2013</td>
+                                        <td>
+                                            <button>View table</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-single">
+                            <p>
+                                <i class='bx bxs-category'></i>
+                            </p>
+                            <div>
+                                <h5>10</h5>
+                                <small>Table categories</small>
+                            </div>
+                        </div>
+                        <div class="summary-single">
+                            <p>
+                                <i class='bx bxs-data'></i>
+                            </p>
+                            <div>
+                                <h5>230</h5>
+                                <small>Oldest entries range</small>
+                            </div>
+                        </div>
+                        <div class="summary-single">
+                            <p>
+                                <i class='bx bxl-trello'></i>
+                            </p>
+                            <div>
+                                <h5>9</h5>
+                                <small>Relational types</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+            <section class="table-detail">
+                <table>
+
+                </table>
+            </section>
+        </main>
+    </div>
+   
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <p>Filter by:</p>
+                <span class="close-modal">&times;</span>
+            </div>
+            
+            <h6>Field Type</h6>
+            <div class="checkbox-wrapper">
+             <label for="number"> Number </label>
+            <input type="checkbox" id="number" name="number" value="number">
+            </div>
+            <div class="checkbox-wrapper">
+                <label for="number"> Interger </label>
+                <input type="checkbox" id="interger" name="interger" value="interger">
+            </div>
+            
+            <div class="checkbox-wrapper">
+                <label for="date"> Date </label>
+            <input type="date" id="numer" name="date" value="date">
+            </div>
+
+           <div>
+            <button class="apply-filters">Apply filters</button>
+           </div>
+           <p class="cancel-text">Cancel filters</p>
+
+        </div>
+       
+    </div>
+    </div>
+</body>
+
+</html>

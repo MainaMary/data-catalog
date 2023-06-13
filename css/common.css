@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    }
+    .main-content{
+        position: relative;
+        overflow-x: hidden;
+        margin-left: 240px;
+        background-color: var(--bg-light-gray);
+       
+    }
+:root{
+    --primary-color: #497CF7;
+    --secondary-color: #7A7C8D;
+    --white: #ffffff;
+    --text-color: #DCDBE1;
+    --bg-gray:#DFE5FD;
+    --bg-green:#EDF5F7;
+    --icon-green:#8BC4BC;
+    --bg-light-gray:#E0E5FD;
+    --red:#d6545f;
+    }
+    .sidebar{
+        height: 100%;
+        width: 240px;
+        position:fixed;
+        left:0;
+        top:0;
+        z-index:100;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        padding: 16px 24px;
+        overflow-y: auto;
+    
+    }
+    .sidebar-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        padding: 0rem 1rem;
+    }
+    .sidebar-menu{
+        padding: 1rem;
+    }
+    .sidebar ul li{
+        margin: 1rem 0;
+    }
+    .sidebar ul li a {
+        color: var(--white);
+    }
+    .sidebar-menu ul li a{
+        display: flex;
+        height:auto;
+        align-items: center;
+        gap:12px;
+    }
+    .bx {
+        font-size: 24px;
+    }
+    .bx-menu{
+        font-size: 32px;
+    }
+    
+    .main-content{
+        position: relative;
+        overflow-x: hidden;
+        margin-left: 240px;
+        background-color: var(--bg-light-gray);
+       
+    }
+     header{
+        position: fixed;
+        top:0;
+        z-index: 100;
+        width: calc(100% - 240px);
+        left: 240px;
+        background: #fff;
+        height:80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 0 3px #777;
+        padding:0 1.2rem;
+        
+    }
+    main {
+        margin-top: 60px;
+        min-height: 90vh;
+       
+        padding:1.2rem;
+         
+    }
