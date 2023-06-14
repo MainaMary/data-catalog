@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Data Catlog</title>
     <script src="./js/index.js" defer></script>
 </head>
 
 <body>
+    <input type="checkbox" id="sidebar-toggle"/>
     <div class="sidebar">
         <div class="sidebar-header">
             <h3 class="brand">
                 <span class="ti-unlink"></span>
                 <span>Catlog</span>
             </h3>
-            <span class="ti-menu-alt">
+            <label for="sidebar-toggle">
                 <i class='bx bx-menu'></i>
-            </span>
+            </label>
         </div>
         <div class="sidebar-menu">
             <ul>
@@ -34,16 +34,16 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="">
                         <span>
                             <i class='bx bx-table' style='color:#ffffff'></i>
                         </span>
                         <span>All tables</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="">
+                    <a href="./html/search.html">
                         <span> <i class='bx bx-search-alt-2' style='color:#ffffff'></i></span>
                         <span>Search results</span>
                     </a>
@@ -62,6 +62,26 @@
             <div>
                 <h3>Dashboard</h3>
             </div>
+            <form>
+                <div class="form-wrapper">
+
+                    <div class="input-wrapper">
+                        <select name="cars" id="cars" &nbsp;>
+                            <option value="All categories">All categories</option>
+                            <option value="table name">Name</option>
+                            <option value="desc">Description</option>
+                            <option value="comment">Comment</option>
+                            <option value="column">Column</option>
+                        </select>
+                        <input type="search" id="search-dropdown" placeholder="Search by name" required>
+                        <span type="submit">
+
+                            <i class='bx bx-search-alt-2'></i>
+
+                        </span>
+                    </div>
+                </div>
+            </form>
             <div class="social-icons">
                 <p><i class='bx bx-bell'></i></p>
             </div>
@@ -78,7 +98,7 @@
 
                         <div class="dash-statistics">
                             <h5>Total tables</h5>
-                            <h4>456</h4>
+                            <p>50</p>
                         </div>
                     </div>
 
@@ -91,7 +111,7 @@
 
                         <div class="dash-statistics">
                             <h5>Total Views</h5>
-                            <h4>400</h4>
+                            <p>400</p>
                         </div>
                     </div>
 
@@ -104,106 +124,48 @@
 
                         <div class="dash-statistics">
                             <h5>Total Columns</h5>
-                            <h4>45</h4>
+                            <p>45</p>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <section>
-                <div class="search-wrapper">
-                    <form>
-                        <div class="form-wrapper">
 
-                            <div class="input-wrapper">
-                                <input type="search" id="search-dropdown" placeholder="Search by name" required>
-                                <span type="submit">
-
-                                    <i class='bx bx-search-alt-2'></i>
-
-                                </span>
-                            </div>
-                        </div>
-                    </form>
-                    <div>
-                        <button class="filter-button">
-                            <span>
-                                <i class='bx bx-filter'></i>
-                            </span>
-                            Filter</button>
-                    </div>
-                </div>
-
-
-            </section>
             <section class="recent">
                 <div class="activity-grid">
                     <div class="activity-card">
                         <div class="table-header">
-                            <h3>Table names</h3>
+                            <h3>Catalog database</h3>
                             <div>
-                                <button>
-                                    <span><i class='bx bx-right-arrow-alt' style='color:#ffffff'></i></span>
-                                    See all</button>
+                                <button class="filter-button">
+                                    <span>
+                                        <i class='bx bx-filter'></i>
+                                    </span>
+                                    Filter</button>
                             </div>
                         </div>
                         <div class="table-wrapper">
-                            <table border="1">
+                            <table border="1" id="tableList">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
+                                        <th>
+                                            <input type="checkbox" />
+                                        </th>
+                                        
+                                        <th>name</th>
                                         <th>Category</th>
-                                        <th>Date</th>
+                                        <th>Date created</th>
                                         <th>View</th>
                                     </tr>
                                 </thead>
+        
                                 <tbody>
-                                    <tr>
-                                        <td>Customers</td>
-                                        <td>User</td>
-                                        <td>30 Aug 2006</td>
-                                        <td>
-                                            <button>
-                                                <a href="./html/table.html">View table</a>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Customers</td>
-                                        <td>User</td>
-                                        <td>30 Aug 2006</td>
-                                        <td>
-                                            <button>View table</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Customers</td>
-                                        <td>User</td>
-                                        <td>15 March 2006</td>
-                                        <td>
-                                            <button>View table</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Customers</td>
-                                        <td>User</td>
-                                        <td>01 Jan 2013</td>
-                                        <td>
-                                            <button>View table</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Customers</td>
-                                        <td>User</td>
-                                        <td>01 Jan 2013</td>
-                                        <td>
-                                            <button>View table</button>
-                                        </td>
-                                    </tr>
+        
                                 </tbody>
                             </table>
+        
                         </div>
-
+                        <div class="page-numbers" id="pagination"></div>
                     </div>
                     <div class="summary-card">
                         <div class="summary-single">
@@ -238,14 +200,14 @@
 
 
             </section>
-            <section class="table-detail">
-                <table>
+            <section>
+                
+               
 
-                </table>
             </section>
         </main>
     </div>
-   
+
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -253,29 +215,29 @@
                 <p>Filter by:</p>
                 <span class="close-modal">&times;</span>
             </div>
-            
+
             <h6>Field Type</h6>
             <div class="checkbox-wrapper">
-             <label for="number"> Number </label>
-            <input type="checkbox" id="number" name="number" value="number">
+                <label for="number"> Number </label>
+                <input type="checkbox" id="number" name="number" value="number">
             </div>
             <div class="checkbox-wrapper">
                 <label for="number"> Interger </label>
                 <input type="checkbox" id="interger" name="interger" value="interger">
             </div>
-            
+
             <div class="checkbox-wrapper">
                 <label for="date"> Date </label>
-            <input type="date" id="numer" name="date" value="date">
+                <input type="date" id="date" name="date" value="date">
             </div>
 
-           <div>
-            <button class="apply-filters">Apply filters</button>
-           </div>
-           <p class="cancel-text">Cancel filters</p>
+            <div>
+                <button class="apply-filters">Apply filters</button>
+            </div>
+            <p class="cancel-text">Cancel filters</p>
 
         </div>
-       
+
     </div>
     </div>
 </body>

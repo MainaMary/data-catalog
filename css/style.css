@@ -47,6 +47,7 @@ font-family: 'Poppins', sans-serif;
     grid-template-columns: repeat(3, 1fr);
     
 }
+
 .dashboard-card-single{
     box-shadow: 0 0 3px #777;
     border-radius: 5px;
@@ -71,10 +72,10 @@ font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: var(--primary-color)
  }
- .dash-statistics h4{
+ .dash-statistics p{
     color: var(--secondary-color);
-    font-weight: 700;
-    font-size: 20px
+    font-weight: 500;
+    font-size: 16px
 
  }
  button {
@@ -87,6 +88,7 @@ font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     border-radius: 5px;
+    cursor: pointer;
  }
  .recent {
     margin: 2rem 0;
@@ -98,9 +100,38 @@ font-family: 'Poppins', sans-serif;
     grid-template-columns: 70% 27%;
     
  }
+ @media only screen and (max-width: 768px) {
+   .dashboard-cards{
+      grid-template-columns: repeat(1, 1fr); 
+   }
+   .dashboard-card-single{
+      margin: 12px 0;
+   }
+   .main-content{
+      padding: 1.2rem 0;
+   }
+   .activity-grid{
+      display: block;
+   }
+   th, td {
+      display: table-cell;
+      width: auto;
+    }
+    
+    th {
+      text-align: left;
+    }
+    .table-header{
+      flex-direction: column;
+      padding: .5rem 1.2rem;
+      text-align: center;
+      justify-content: center;
+    }
+}
  .table-wrapper{
     background-color: var(--white);
     border-radius: 10px;
+    overflow-x: auto;
 
  }
  .table-header{
@@ -179,57 +210,7 @@ font-family: 'Poppins', sans-serif;
    align-items: center;
    margin-top: 20px;
  }
- form{
-   width: 60%;
- }
- .form-wrapper{
-   display:flex;
- }
- .form-label{
-   margin-top: 4px;
-   font-size: 12px;
-   font-weight: 400;
-   color: var(--secondary-color);
-
- }
- .dropdown-button{
-   display: inline-flex;
-   flex-shrink: 0;
-   z-index: 10;
-   align-items: center;
-   padding: 1rem .5rem;
-   font-size: 14px;
-   background-color: var(--bg-light-gray);
-   border: 1px solid var(--secondary-color);
-   border-radius: 5px;
-   outline:none;
- }
- .input-wrapper{
-   position: relative;
-   width: 100%;
- }
- input[type=search]{
-   display: flex;
-   align-items: center;
-   height: auto;
-   padding: .7rem 3rem;
-   width: 100%;
-   z-index: 20;
-   font-size: 14px;
-   border-radius: 5px;
-   border: 1px solid var(--secondary-color);
-   outline: none;
-
- }
- .input-wrapper span{
-   position:absolute;
-   top: 10px;
-   left: 12px;
-   
-   font-weight: 500;
-   color: var(--secondary-color)
-   
- }
+ 
  .modal {
    display: none; /* Hide the modal by default */
    position: fixed;
@@ -307,6 +288,15 @@ color: var(--red);
 text-align: center;
 margin-top: 4px;
 }
-.table-detail{
-
+button .active{
+   background-color: transparent;
+   border: 1px solid var(--primary-color);
+   border-radius: 5px;
+}
+#pagination{
+   display: flex;
+    margin: 16px auto;
+    gap:12px;
+    justify-content: center;
+   
 }
