@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/common.css"/>
     <link rel="stylesheet" href="../css/login.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
     <title>Catalog</title>
 </head>
 <body>
     <div class="container">
     
         <form class="login-form">
+            
             <h2>Sign in</h2>
+            <p class="error-validation"></p>
             <div class="label-wrapper">
                 <label>Email</label>
-                <input type="text" name="email" placeholder="Email"/>
+                <input class="email" type="text" name="email" placeholder="Email"/>
             </div>
             <div class="label-wrapper">
                 <label>Password</label>
-                <input type="password" name="password" placeholder="Password"/>
+                <input class="password" type="password" name="password" placeholder="Password"/>
             </div>
             <button  class="signin-btn"type="submit">Sign in</button>
         </form>
@@ -26,4 +29,34 @@
     </div>
     
 </body>
+<script>
+    const form = document.querySelector('.login-form')
+    const error = document.querySelector('.error-validation')
+    const email = document.querySelector('.email')
+    const password = document.querySelector('.password')
+    form.addEventListener('submit', function(e){
+        e.preventDefault()
+        setTimeout(()=>{
+            error.innerHTML =''
+        },1200)
+        if(!email.value || !password.value){
+            error.style.color="red";
+           
+                error.innerHTML = 'Please submit all values'
+            
+        }else{
+            error.innerHTML=''
+            const user={
+                email
+            }
+            localStorage.setItem('user', user );
+          
+            if(JSON.parse(localStorage.getItem('user'))){
+                window.location.href="../index.html"
+            }
+        }
+    })
+
+</script>
+
 </html>

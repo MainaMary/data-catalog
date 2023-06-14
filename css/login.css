@@ -16,12 +16,12 @@ width: 30%;
     background-color: white;
     padding: 2rem 1.5rem;
 }
-.label-wrapper{
+.login-form div{
     margin: 24px 0;
 }
 form h2{
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 24px;
     color: var(--primary-color);
     margin-bottom: 10px;
     text-align: center;
@@ -43,4 +43,19 @@ input{
 
 .signin-btn{
     text-transform: uppercase;
+    margin-top: 12px;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-weight: 400;
+    margin: auto;
+}
+.error-validation{
+    margin: 8px 0;
+    text-align: center;
+    font-weight: 400;
+}
+@media only screen and (max-width: 768px){
+    form{
+       width: 80%;
+    }
 }

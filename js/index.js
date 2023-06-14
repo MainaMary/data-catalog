@@ -14,6 +14,11 @@ function closeModal() {
 filter.addEventListener('click', openModal)
 close.addEventListener('click', closeModal)
 
+//user details
+const getUser = localStorage.getItem('user')
+if(getUser){
+    console.log(getUser)
+}
 //Table pagination
 const data = [
     {
@@ -36,81 +41,123 @@ const data = [
 
     },
     {
-        id: 1,
+        id: 4,
         name:"Users",
         category:"User management",
         date: "30 Aug 2022"
         },
         {
-            id: 2,
+            id: 5,
             name:"Shipping",
             category:"Shipping management",
             date: "30 Aug 2022"
         },
         {
-        id: 3,
+        id: 6,
         name:"Food",
         category:"Delivery management",
         date: "30 Aug 2022"
     
         },
         {
-            id: 1,
+            id: 7,
             name:"Order",
             category:"Order management",
             date: "30 Aug 2022"
             },
             {
-                id: 2,
+                id: 8,
                 name:"Shipping",
                 category:"Shipping management",
                 date: "30 Aug 2022"
             },
             {
-            id: 3,
+            id: 9,
             name:"Payments",
             category:"Payment management",
             date: "30 Aug 2022"
         
             },
             {
-                id: 1,
+                id: 10,
                 name:"Order",
                 category:"Order management",
                 date: "30 Aug 2022"
                 },
                 {
-                    id: 2,
+                    id: 11,
                     name:"Shipping",
                     category:"Shipping management",
                     date: "30 Aug 2022"
                 },
                 {
-                id: 3,
+                id: 12,
                 name:"Payments",
                 category:"Payment management",
                 date: "30 Aug 2022"
             
                 },
                 {
-                    id: 1,
+                    id: 13,
                     name:"Order",
                     category:"Order management",
                     date: "30 Aug 2022"
                     },
                     {
-                        id: 2,
+                        id: 14,
                         name:"Shipping",
                         category:"Shipping management",
                         date: "30 Aug 2022"
                     },
                     {
-                    id: 3,
+                    id: 15,
                     name:"Payments",
                     category:"Payment management",
                     date: "30 Aug 2022"
                 
-                    }
+                    },
+                    {
+                        id: 16,
+                        name:"Payments",
+                        category:"Payment management",
+                        date: "30 Aug 2022"
+                    
+                        },
+                        {
+                            id: 17,
+                            name:"Payments",
+                            category:"Payment management",
+                            date: "30 Aug 2022"
+                        
+                            },
+                            {
+                                id: 18,
+                                name:"Payments",
+                                category:"Payment management",
+                                date: "30 Aug 2022"
+                            
+                                },
+                                {
+                                    id: 19,
+                                    name:"Payments",
+                                    category:"Payment management",
+                                    date: "30 Aug 2022"
+                                
+                                    },
+                                    {
+                                        id: 20,
+                                        name:"Payments",
+                                        category:"Payment management",
+                                        date: "30 Aug 2022"
+                                    
+                                        },
+                                        {
+                                            id: 21,
+                                            name:"Payments",
+                                            category:"Payment management",
+                                            date: "30 Aug 2022"
+                                        
+                                            }
 ]
 const table = document.getElementById("tableList");
 const tbody = table.querySelector("tbody");
@@ -133,15 +180,15 @@ function displayList(items, wrapper, rows_per_page,page){
         <td>
                 <input type="checkbox" />
                 </td>
-       
+                <td>${item.id}</td>
         <td>${item.name}</td>
         <td>${item.category}</td>
         <td>${item.date}</td>
         <td>
-                                            <button>
-                                                <a href="./html/table.html">View table</a>
-                                            </button>
-                                        </td>
+
+        <button>
+        <a href="../html/table.html">View table</a>
+    </button> </td>
 `;
 tbody.appendChild(row);
   }  
