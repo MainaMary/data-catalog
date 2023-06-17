@@ -107,6 +107,7 @@ body{
       }
       .form-wrapper{
         display:flex;
+        background-color: var(--bg-light-gray);
       }
       .form-label{
         margin-top: 4px;
