@@ -102,6 +102,52 @@ body{
         padding:1.2rem;
          
     }
+    .select-menu{
+      position: absolute;
+      width:250px;
+    }
+    .select-menu .select-btn{
+      display: flex;
+      font-size: 18px;
+      font-weight: 400;
+      border-radius: 8px;
+      align-items: center;
+      cursor: pointer;
+      justify-content: space-between;
+      box-shadow:  0 0 5px rgba(0,0,0,0.1);
+
+    }
+    .select-btn i{
+      font-size: 25px
+    }
+    .select-menu .options{
+      position: relative;
+      border-radius: 8px;
+      margin-top: 10px;
+      background-color: #fff;
+      box-shadow:  0 0 5px rgba(0,0,0,0.1);
+    }
+    .options .option{
+      display: flex;
+      height: 55px;
+      cursor: pointer;
+      align-items: center;
+      gap:10px;
+      padding: 0 16px;
+      border-radius: 8px;
+      background-color: #fff;
+
+    }
+    .options .option:hover{
+      background-color: var(--primary-color);
+    }
+    .option i{
+      font-size: 25px;
+
+    }
+    .option .option-text{
+      font-size: 18px;
+    }
     form{
         width: 60%;
       }
