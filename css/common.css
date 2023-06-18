@@ -103,8 +103,9 @@ body{
          
     }
     .select-menu{
-      position: absolute;
-      width:250px;
+      position: relative;
+      width:300px;
+     
     }
     .select-menu .select-btn{
       display: flex;
@@ -114,22 +115,32 @@ body{
       align-items: center;
       cursor: pointer;
       justify-content: space-between;
+      padding: .5rem 1rem;
       box-shadow:  0 0 5px rgba(0,0,0,0.1);
 
     }
     .select-btn i{
-      font-size: 25px
+      font-size: 25px;
+      transition: 1s;
     }
     .select-menu .options{
-      position: relative;
+      position: absolute;
       border-radius: 8px;
       margin-top: 10px;
+      width: 100%;
       background-color: #fff;
       box-shadow:  0 0 5px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .select-menu.active-option .select-btn i{
+      transform: rotate(-180deg);
+    }
+    .select-menu.active-option .options{
+      display: block;
     }
     .options .option{
       display: flex;
-      height: 55px;
+      height: 50px;
       cursor: pointer;
       align-items: center;
       gap:10px;
@@ -138,18 +149,25 @@ body{
       background-color: #fff;
 
     }
-    .options .option:hover{
+    .options .option:hover {
       background-color: var(--primary-color);
+      color: #fff;
+     
+    }
+    .options .option:hover .option span{
+      color: #fff;
     }
     .option i{
       font-size: 25px;
 
     }
-    .option .option-text{
-      font-size: 18px;
+    .option .option-text, .select-btn span{
+      font-size: 16px;
+      font-weight: 400;
+      color:var(--secondary-color)
     }
     form{
-        width: 60%;
+        width: 40%;
       }
       .form-wrapper{
         display:flex;
@@ -171,7 +189,7 @@ body{
         .input-wrapper span{
           position:absolute;
           top: 10px;
-          right: 10px;
+          left: 10px;
           
           font-weight: 500;
          
@@ -190,7 +208,7 @@ body{
       }
       .input-wrapper select{
         left:0;
-        width:150px;
+       
         position: absolute;
         padding: .7rem 1rem;
         outline:none;
@@ -206,12 +224,13 @@ body{
         display: flex;
         align-items: center;
         height: auto;
-        padding: .7rem 10rem;
+        padding: .7rem 3rem;
         width: 100%;
         z-index: 20;
         font-size: 14px;
         border-radius: 5px;
-        border: 1px solid var(--secondary-color);
+        background-color: #fff;
+        border: 2px solid var(--secondary-color);
         outline: none;
      
       }
@@ -223,12 +242,16 @@ body{
       .input-wrapper span{
         position:absolute;
         top: 10px;
-        right: 12px;
-        
+        left: 12px;
+      
         font-weight: 500;
        
         color: var(--secondary-color)
         
+      }
+      .input-wrapper span i{
+        color: var(--primary-color);
+        font-weight: 500;
       }
       /* responsive views */
       #sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span:last-child,
@@ -267,9 +290,27 @@ body{
   header {
     width: calc(100% - 100px);
     left: 100px;
+    flex-direction: column;
+    height: 120px;
   }
   header div h3{
     display: none;
+  }
+ 
+  .social-icons{
+    display:none
+  }
+  .social-icons{
+    display:none;
+  }
+  .select-menu{
+    z-index: 70;
+   
+  }
+  form{
+    width:100%;
+    margin-bottom: 10px;
+    
   }
   th, td {
     display: table-cell;
